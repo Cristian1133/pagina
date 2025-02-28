@@ -138,7 +138,59 @@
             referrerpolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
+        
       </div>
+      <h2>Formulario de Pedido</h2>
+        <form action="/enviar_pedido" method="post">
+          <fieldset>
+            <legend>Información Personal</legend>
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ej: Juan Pérez" />
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Ej: +57 315 555 1234" pattern="^\+?\d{7,15}$" />
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required placeholder="correo@ejemplo.com" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Datos del Pedido</legend>
+            <label for="producto">Producto:</label>
+            <select id="producto" name="producto" required>
+              <option value="pechera">Protector de Cárter (Pechera)</option>
+              <option value="llantas">Llantas</option>
+              <option value="pastillas_freno">Pastillas de Freno</option>
+              <option value="aceite_motor">Aceite para Motor</option>
+            </select>
+
+            <label for="modelo">Modelo de Moto:</label>
+            <input type="text" id="modelo" name="modelo" required placeholder="Ej: NS 200, FZ 16, Boxer" />
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad" required min="1" max="10" value="1" />
+          </fieldset>
+
+          <fieldset>
+            <legend>Dirección de Envío</legend>
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" name="direccion" required placeholder="Calle 15 #14-67, Bucaramanga" />
+
+            <label for="ciudad">Ciudad:</label>
+            <input type="text" id="ciudad" name="ciudad" required placeholder="Ej: Bucaramanga" />
+
+            <label for="pais">País:</label>
+            <select id="pais" name="pais" required>
+              <option value="colombia">Colombia</option>
+              <option value="mexico">México</option>
+              <option value="argentina">Argentina</option>
+            </select>
+          </fieldset>
+
+          <button type="submit">Enviar Pedido</button>
+          <button type="reset">Restablecer</button>
+        </form>
     </div>
+    
   </body>
 </html>
