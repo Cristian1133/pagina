@@ -377,4 +377,22 @@ form {
       font-size: 16px;
     }
   }
+  .header {
+    display: flex;
+    align-items: center; /* Alinear verticalmente */
+    justify-content: space-between; /* Espaciado uniforme */
+    padding: 10px 20px;
+  
+  }
+  
+  .header img:first-child { /* Logo */
+    height: 200px; /* Ajusta la altura del logo */
+    width: auto; /* Mantiene la proporción */
+  }
+  
+  .header img:last-child { /* Banner */
+    max-width: 70%; /* Ocupa el 70% del ancho */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 10px; /* Esquinas redondeadas */
+  }
   
