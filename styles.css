@@ -386,7 +386,7 @@ form {
   }
   
   .header img:first-child { /* Logo */
-    height: 200px; /* Ajusta la altura del logo */
+    height: 150px; /* Ajusta la altura del logo */
     width: auto; /* Mantiene la proporción */
   }
   
