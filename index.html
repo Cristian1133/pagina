@@ -142,7 +142,8 @@
             id="nombre"
             name="nombre"
             required
-            placeholder="Ej: Juan Pérez"/>
+            placeholder="Ej: Juan Pérez"
+            maxlength="50"/>
 
           <label for="telefono">Teléfono:</label>
           <input
@@ -151,7 +152,11 @@
             name="telefono"
             required
             placeholder="Ej: +57 315 555 1234"
-            pattern="^\+?\d{7,15}$"/>
+            
+            pattern="^3\d{9}$"
+             placeholder="3123456789"
+            title="El número debe empezar con 3 y tener exactamente 10 dígitos y solo deben ser numeros"
+            maxlength="10"/>
 
           <label for="email">Correo Electrónico:</label>
           <input
@@ -159,26 +164,54 @@
             id="email"
             name="email"
             required
-            placeholder="correo@ejemplo.com"/>
+            placeholder="correo@ejemplo.com" maxlength="50"/>
         </fieldset>
 
         <fieldset>
           <legend>Datos del Pedido</legend>
           <label for="producto">Producto:</label>
           <select id="producto" name="producto" required>
-            <option value="pechera">Protector de Cárter (Pechera)</option>
-            <option value="llantas">Llantas</option>
-            <option value="pastillas_freno">Pastillas de Freno</option>
-            <option value="aceite_motor">Aceite para Motor</option>
+            <option value="espejos">Espejos Retrovisores</option>
+            <option value="manubrio">Manubrio</option>
+            <option value="cadena">Cadena de Transmisión</option>
+            <option value="faro">Faro Delantero</option>
+            <option value="frenos_discos">Discos de Freno</option>
+            <option value="bateria">Batería</option>
+            <option value="amortiguadores">Amortiguadores</option>
+            <option value="escape">Escape</option>
+            <option value="embrague">Kit de Embrague</option>
+            <option value="parrilla">Parrilla para Carga</option>
+            <option value="guardabarros">Guardabarros</option>
+            <option value="kit_arrastre">Kit de Arrastre</option>
+            <option value="cascos">Cascos</option>
+            <option value="intermitentes">Luces Intermitentes</option>
+            <option value="gps">GPS para Motocicleta</option>
+            <option value="bolsas_laterales">Bolsas Laterales</option>
+            <option value="puños_calefactables">Puños Calefactables</option>
+            <option value="soporte_telefono">Soporte para Teléfono</option>
+            <option value="chaleco_reflectante">Chaleco Reflectante</option>
+            
           </select>
 
-          <label for="modelo">Modelo de Moto:</label>
-          <input
-            type="text"
-            id="modelo"
-            name="modelo"
-            required
-            placeholder="Ej: NS 200, FZ 16, Boxer"/>
+          <label for="producto">modelo de moto:</label>
+          <select id="producto" name="producto" required>
+            <option value="fz16">FZ 16</option>
+            <option value="fz20">FZ 2.0</option>
+            <option value="xtz125">XTZ 125</option>
+            <option value="xtz150">XTZ 150</option>
+            <option value="xtz250_viejo">XTZ 250 (Modelo viejo)</option>
+            <option value="szr">SZ-R</option>
+            <option value="xr150">XR 150</option>
+            <option value="xre190">XRE 190</option>
+            <option value="nkd">NKD</option>
+            <option value="boxer_ct">BOXER CT</option>
+            <option value="boxer_ks">BOXER KS</option>
+            <option value="libero125">LIBERO 125</option>
+            <option value="dr150">DR 150</option>
+            <option value="ns200">NS 200</option>
+            <option value="mrx125">MRX 125</option>
+            
+          </select>
 
           <label for="cantidad">Cantidad:</label>
           <input
@@ -212,12 +245,15 @@
           <label for="pais">País:</label>
           <select id="pais" name="pais" required>
             <option value="colombia">Colombia</option>
-            <option value="mexico">México</option>
-            <option value="argentina">Argentina</option>
           </select>
         </fieldset>
 
-        <button type="submit">Enviar Pedido</button>
+        <input type="checkbox" id="confirmacion" class="oculto">
+  <label for="confirmacion">
+    <button type="button">Enviar Pedido</button>
+  </label>
+  
+  <p class="mensaje">Su pedido está en revisión.</p>
         <button type="reset">Restablecer</button>
       </form>
     </div>

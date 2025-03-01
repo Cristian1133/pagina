@@ -415,4 +415,18 @@ form {
       max-width: 90%; /* Hace que el banner sea más ancho */
     }
   }
-  
+  .oculto {
+    display: none;
+}
+
+.mensaje {
+    display: none;
+    color: green;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Cuando se presiona el botón, el checkbox se marca y se muestra el mensaje */
+#confirmacion:checked + .mensaje {
+    display: block;
+}
