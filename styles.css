@@ -379,20 +379,40 @@ form {
   }
   .header {
     display: flex;
-    align-items: center; /* Alinear verticalmente */
-    justify-content: space-between; /* Espaciado uniforme */
+    align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
-  
+    
+    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
   }
   
-  .header img:first-child { /* Logo */
-    height: 150px; /* Ajusta la altura del logo */
-    width: auto; /* Mantiene la proporción */
+  /* Ajuste del Logo */
+  .header img:first-child {
+    height: 200px;
+    width: auto;
   }
   
-  .header img:last-child { /* Banner */
-    max-width: 70%; /* Ocupa el 70% del ancho */
-    height: auto; /* Mantiene la proporción */
-    border-radius: 10px; /* Esquinas redondeadas */
+  /* Ajuste del Banner */
+  .header img:last-child {
+    max-width: 70%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* 🔹 Diseño Adaptable para Celulares */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column; /* Cambia a diseño vertical */
+      align-items: center; /* Centra los elementos */
+      text-align: center;
+    }
+  
+    .header img:first-child {
+      height: 60px; /* Reduce el tamaño del logo en móviles */
+    }
+  
+    .header img:last-child {
+      max-width: 90%; /* Hace que el banner sea más ancho */
+    }
   }
   
